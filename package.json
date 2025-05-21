@@ -1,0 +1,20 @@
+{
+  "name": "s86_yashmieen_capstone_autoverse",
+  "version": "1.0.0",
+  "description": "AutoVerse is a feature-rich, fan-made web application built for car enthusiasts. It allows users to explore car brands, models, specs, and reviews. From managing personal car collections to comparing vehicles, logging road trips, and taking fun quizzes, AutoVerse delivers a complete automotive community experience with modern design and seamless functionality.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.0",
+    "nodemon": "^3.1.10"
+  }
+}
