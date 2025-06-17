@@ -98,5 +98,3 @@ Develop a full-stack car exploration platform that integrates third-party car da
 ## 📌 Conclusion
 
 AutoVerse isn’t just a car app—it’s a community for automotive lovers. Whether you're comparing the latest models, logging your road adventures, or testing your car knowledge with fun quizzes, AutoVerse is your ultimate digital garage. Built on the robust MERN stack with thoughtful design and functionality, this capstone project is a celebration of speed, specs, and software engineering.
-
-
