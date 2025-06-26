@@ -79,5 +79,3 @@ module.exports = {
   createCar,
   updateCar
 };
-
-// this is where the controller present
