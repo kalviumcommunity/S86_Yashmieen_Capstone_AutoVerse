@@ -10,18 +10,12 @@ const getCars = async (req, res) => {
   }
 };
 
+
 // POST a new car
 const createCar = async (req, res) => {
   try {
-    const {
-      brand,
-      model,
-      year,
-      horsepower,
-      price,
-      image
-    } = req.body;
-
+    const { brand, model, year, horsepower, price, image } = req.body;
+    
     const newCar = new Car({
       brand,
       model,
@@ -30,7 +24,7 @@ const createCar = async (req, res) => {
       price,
       image
     });
-
+    
     const savedCar = await newCar.save();
     res.status(201).json(savedCar);
   } catch (err) {
@@ -42,9 +36,7 @@ const createCar = async (req, res) => {
 const getCarById = async (req, res) => {
   try {
     const car = await Car.findById(req.params.id);
-    if (!car) {
-      return res.status(404).json({ message: 'Car not found' });
-    }
+    if (!car) return res.status(404).json({ message: 'Car not found' });
     res.json(car);
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -57,25 +49,14 @@ const updateCar = async (req, res) => {
     const updatedCar = await Car.findByIdAndUpdate(
       req.params.id,
       req.body,
-      {
-        new: true,
-        runValidators: true
-      }
+      { new: true, runValidators: true }
     );
-
-    if (!updatedCar) {
-      return res.status(404).json({ message: 'Car not found' });
-    }
-
+    if (!updatedCar) return res.status(404).json({ message: 'Car not found' });
     res.json(updatedCar);
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
 };
 
-module.exports = {
-  getCars,
-  getCarById,
-  createCar,
-  updateCar
-};
+
+module.exports = { getCars, getCarById, createCar, updateCar };
